@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="NL">
+<head>
+<meta charset="UTF-8">
+<meta http-equi="language" content="NL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <meta name="description" content="">
+ <meta name="author" content="Maitri Rambaran">
+ <meta name="keywords" content="WRC, Rugby Den Haag">
+ <title>Home</title>
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/wrc logo.png" alt="Het logo van WRC"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="over.html">Over wrc</a></li>
+                <li><a href="bestuur.html">Het bestuur</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section id="banner">
+        <picture>
+            <source media="(max-width: 320px)" srcset="images/Ameland-banner(320x106).jpg">
+            <source media="(min-width: 720px)" srcset="images/Ameland-banner.jpg">
+            <img src="images/Ameland-banner.jpg" alt="Foto van het WRC team op Ameland">
+        </picture>
+    </section>
+    
+    <section>
+        <article id="welkom">
+            <h1>Welkom bij WRC Te Werve</h1>
+            <h2>Over WRC</h2>
+            <p>WRC Te Werve is een kleine, sociale rugbyvereniging die zich richt op het Westland, Rijswijk en Den Haag, inclusief de expatgemeenschap in deze regio's. Onze club heeft een rijke geschiedenis, voortkomend uit een fusie in 2014 tussen Te Werve RUFC en de Westlandse Rugby Club. Bij ons staan spelplezier en de liefde voor rugby centraal.<br>
+                <span id="klik" onclick="leesMeer()"><u>Lees meer</u></span>
+                <script>
+                    function leesMeer(){
+                        document.getElementById("klik").innerHTML = 
+                        "We hechten veel waarde aan respect, discipline en kameraadschap, en voegen daar een flinke dosis plezier aan toe. Onze senioren spelen in de derde klasse van de competitie, en we zijn actief bezig met het opbouwen van een eigen jeugdafdeling. Of je nu groot of klein, jong of oud, ervaren of nieuw bent, iedereen is welkom om de unieke rugbyervaring bij WRC Te Werve te ontdekken. "
+                    }
+                </script>
+                </p>
+                <aside>
+                    <picture>
+                        <source media="(max-width: 320px)" srcset="images/Ameland-5(320x237).jpg">
+                        <source media="(min-width: 720px)" srcset="images/Ameland-5.jpg">
+                        <img src="images/Ameland 5.jpg" alt="foto van een team in het zand op Ameland">
+                    </picture>
+                </aside>
+        </article>
+    </section>
+    <section>
+        <article id="update">
+            <h2>Updates</h2>
+            <article><img src="" alt=""></article>
+        </article>
+    </section>
+    <section>
+        <article id="reviews">
+            <h2>Reviews</h2>
+            <article id="ploeger">
+                <img src="images/p.ploeger_review(1).png" alt="Profielfoto van p.ploeger">
+                <p>P.Ploeger</p>
+                <p>Mooie rugbyclub midden in Den Haag! Goede jeugdbegeleiding, gezellige sfeer, iedereen is welkom.</p>
+            </article>
+        </article>
+    </section>
+</main>
+</body>
+</html>
