@@ -54,7 +54,29 @@
         width: 100vw;
     }
 
+    /* updates css mobile */
+    #rugbyletsel{
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-areas: "image tekst pijlen";
+        column-gap: repeat(3, 1fr);
+        margin-top: 5px;
+    }
+    #rugbyletsel .rugbyletselimg {
+        width: 90px;
+        grid-area: "image";
+    }
+    #rugbyletsel p{
+        grid-area: "tekst";
+    }
+    #rugbyletsel a img{
+        grid-area: "pijlen";
+    }
+
     /* reviews css mobile */
+    #reviews #ploeger{
+        background-color: #D9D9D9;
+    }
     #reviews #ploeger img{
         width: 60px;
     }
