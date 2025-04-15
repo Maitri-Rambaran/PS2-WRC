@@ -50,22 +50,34 @@
         font-family: "Baloo Bhaijaan 2", sans-serif;
         font-size: 12px;
     }
-    #welkom h1{
+    .welkom-tekst{
+        display: block;
+        padding: 1rem;
+    }
+    #welkom .welkom-tekst h1{
         text-align: center;
     
     }
-    #welkom h2{
+    #welkom .welkom-tekst h2{
         margin-top: 20px;
     }
-    #welkom p{
-        width: 100vw;
+    #welkom .welkom-tekst p{
+        width: 100%;
+    }
+    #welkom .welkom-tekst .lees-meer{
+        display: inline;
+    }
+    #welkom #welkom-img picture
+    #welkom #welkom-img img{
+        width: 100%;
+        height: auto;
     }
 
     /* updates css mobile */
     #update{
         margin-top: 20px;
     }
-    #rugbyletsel{
+    .rugbyletsel{
         display: grid;
         grid-template-areas: "image tekst pijlen";
         column-gap: repeat(3, 1fr);
@@ -74,14 +86,14 @@
         align-items: center;
         border-bottom: solid black 1px;
     }
-    #rugbyletsel .rugbyletselimg {
+    .rugbyletsel .rugbyletselimg {
         width: 90px;
         grid-area: "image";
     }
-    #rugbyletsel p{
+    .rugbyletsel p{
         grid-area: "tekst";
     }
-    #rugbyletsel a img{
+    .rugbyletsel a img{
         grid-area: "pijlen";
     }
 
@@ -104,7 +116,7 @@
         grid-area: "pijlen";
     }
 
-    #update button{
+    #updates a button{
         color: white;
         background-color: #75AB30;
         padding: 1vh;
@@ -294,16 +306,116 @@ p{
     width: 100%;
     height: 100%;
 }
-#welkom h1{
+
+#banner h1{
     text-align: center;
 }
-#welkom p{
-    width: 50vw;
+#welkom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tekst foto";
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
 }
-#welkom picture{
-    float: right;
+#welkom  .welkom-tekst{
+    max-width: 100%;
+    grid-area: "tekst";
 }
-#welkom .lees-meer{
+#welkom .welkom-tekst .lees-meer{
     display: none;
+}
+#welkom #welkom-img{
+    grid-area: "foto";
+}
+#welkom #welkom-img picture{
+  width: 100%;
+  height: auto;  
+}
+
+/*  update css desktop */
+#updates{
+    padding: 2rem;
+}
+#update{
+    width: 40vw;
+    margin-top: 20px;
+    height: 60vh;
+    display: grid;
+    grid-template-areas: "rugbyletsel clubactie clinics qr";
+    column-gap: repeat(2, 3fr);
+    gap: 1rem;
+}
+.rugbyletsel{
+    background-color: white;
+    grid-area: "rugbyletsel";
+    border: solid black 1px;
+    padding: 1rem;
+}
+.rugbyletsel .rugbyletselimg {
+    width: 10vw;
+    padding: 1vh;
+}
+.rugbyletsel p b{
+    margin-top: 20px;
+    color: #004A8A;
+    text-align: center
+}
+.rugbyletsel a img{
+    display: none;
+}
+.rugbyletsel a button{
+    color: white;
+    background-color: #75AB30;
+    padding: 1vh;
+    border-radius: 6px;
+    border: #75AB30;
+    text-align: center;
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    margin-top: 10px;
+}
+
+#clubactie{
+    background-color: white;
+    grid-area: "rugbyletsel";
+    border: solid black 1px;
+    padding: 1rem;
+}
+#clubactie .clubactieimg {
+    width: 10vw;
+    padding: 1vh;
+}
+#clubactie p b{
+    margin-top: 20px;
+    color: #004A8A;
+    text-align: center
+}
+#clubactie a img{
+    display: none;
+}
+#clubactie a button{
+    color: white;
+    background-color: #75AB30;
+    padding: 1vh;
+    border-radius: 6px;
+    border: #75AB30;
+    text-align: center;
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    margin-top: 10px;
+}
+
+#updates #bekijkUpdates button{
+    color: white;
+    background-color: #75AB30;
+    padding: 1vh;
+    border-radius: 6px;
+    border: #75AB30;
+    text-align: center;
+    display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    margin-left: 45vw;
+    margin-top: 10px;
 }
 }

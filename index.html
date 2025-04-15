@@ -35,52 +35,65 @@
             <source media="(min-width: 720px)" srcset="images/Ameland-banner.jpg">
             <img src="images/Ameland-banner.jpg" alt="Foto van het WRC team op Ameland">
         </picture>
+        
+        <h1>Welkom bij WRC Te Werve</h1>
     </section>
     
-    <section>
-        <article id="welkom">
-            <h1>Welkom bij WRC Te Werve</h1>
+    <section id="welkom">
+        <article class="welkom-tekst">
             <h2>Over WRC</h2>
-            <p>WRC Te Werve is een kleine, sociale rugbyvereniging die zich richt op het Westland, Rijswijk en Den Haag, inclusief de expatgemeenschap in deze regio's. Onze club heeft een rijke geschiedenis, voortkomend uit een fusie in 2014 tussen Te Werve RUFC en de Westlandse Rugby Club. Bij ons staan spelplezier en de liefde voor rugby centraal.<br>
+            <p>WRC Te Werve is een kleine, sociale rugbyvereniging die zich richt op het Westland, Rijswijk en Den Haag, inclusief de expatgemeenschap in deze regio's. Onze club heeft een rijke geschiedenis, voortkomend uit een fusie in 2014 tussen Te Werve RUFC en de Westlandse Rugby Club.<br>
                 <span id="klik" class="lees-meer" onclick="leesMeer()"><u>Lees meer</u></span>
                 <script>
                     function leesMeer(){
-                        const extraText = 
+                        const extraText = "Bij ons staan spelplezier en de liefde voor rugby centraal.We hechten veel waarde aan respect, discipline en kameraadschap, en voegen daar een flinke dosis plezier aan toe. Onze senioren spelen in de derde klasse van de competitie, en we zijn actief bezig met het opbouwen van een eigen jeugdafdeling. Of je nu groot of klein, jong of oud, ervaren of nieuw bent, iedereen is welkom om de unieke rugbyervaring bij WRC Te Werve te ontdekken. <br><br> WRC Te Werve is een vereniging die functioneert dankzij de inzet van een bestuur en diverse commissies, ondersteund door enthousiaste vrijwilligers. Hoewel specifieke details over de huidige bestuursleden en de organisatiestructuur niet direct beschikbaar zijn op de website, is het duidelijk dat de club waarde hecht aan een gestructureerde en betrokken organisatie om de rugbyactiviteiten soepel te laten verlopen.<br><br>Rugby is een contactsport, stevig en fair. Respect, discipline en kameraadschap zijn onze kernwaarden. Als vereniging voegen we daar een flinke dosis plezier aan toe.<br>"
 
-                        document.getElementById("klik").innerHTML = 
-                        "We hechten veel waarde aan respect, discipline en kameraadschap, en voegen daar een flinke dosis plezier aan toe. Onze senioren spelen in de derde klasse van de competitie, en we zijn actief bezig met het opbouwen van een eigen jeugdafdeling. Of je nu groot of klein, jong of oud, ervaren of nieuw bent, iedereen is welkom om de unieke rugbyervaring bij WRC Te Werve te ontdekken. "
+                        document.getElementById("klik").outerHTML = extraText
                     }
+                    window.addEventListener("DOMContentLoaded", () => {
+                        if (window.innerWidth >= 720) {
+                        leesMeer();
+                        }
+                    });
                 </script>
                 </p>
+        </article>
+                <article id="welkom-img">
                     <picture>
                         <source media="(max-width: 320px)" srcset="images/Ameland-5(320x237).jpg">
                         <source media="(min-width: 720px)" srcset="images/Ameland-5.jpg">
                         <img src="images/Ameland 5.jpg" alt="foto van een team in het zand op Ameland">
                     </picture>
-        </article>
+                </article>
     </section>
-    <section>
+
+    <section id="updates">
+        <h2>Updates</h2>
         <article id="update">
-            <h2>Updates</h2>
-            <article id="rugbyletsel">
+            <article class="rugbyletsel">
                 <img class="rugbyletselimg" src="images/wrc logo jpg.jpg" alt="de omslagfoto van de update voor de eerste hulp bij rugbyletsel">
                 <p><b>Eerste hulp bij rugbyletsels</b><br>
-                03-10-2022, 19:42<br>
+                03-10-2022, 19:42<br><br>
                 Lesley Kwantes, instructeur en oud rugbyspeler, heeft deze instructie verzorgd en gesponsord. Lesley, hartelijk bedankt!</p>
                 <a href="#"><img src="images/double_arrow.png" alt="dubbele pijl die je verwijst naar de detailpagina"></a>
+                <a href="#"><button>Lees meer</button></a>
             </article>
+
             <article id="clubactie">
                 <img class="clubactieimg" src="images/Ameland 1.jpg" alt="de omslagfoto voor de update van de grote clubactie">
                 <p><b>Grote Clubactie - loten voor jeugdkamp</b><br>
                 03-10-2022, 19:37<br>
                 Onze jeugd verkoopt loten tijdens de Grote Clubactie.
-                ia onze verkooppagina koop je eenvoudig loten en steun je onze vereniging en het doel waarvoor we geld....
+                ia onze verkooppagina koop je eenvoudig loten en steun je onze vereniging en het doel waarvoor we....
                 </p>
                 <a href="#"><img src="images/double_arrow.png" alt="dubbele pijl die je verwijst naar de detailpagina"></a>
+                <a href="#"><button>Lees meer</button></a>
             </article>
-            <a href="#"><button>Bekijk alle updates</button></a>
+            
         </article>
+        <a id="bekijkUpdates" href="#"><button>Bekijk alle updates</button></a>
     </section>
+
     <section>
         <article id="reviews">
             <h2>Reviews</h2>
