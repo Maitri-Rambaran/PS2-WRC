@@ -11,6 +11,7 @@
     }
     header img{
         width: 20vw;
+        margin-top: 5px;
     }
     header nav ul li{
         display: flex;
@@ -32,6 +33,9 @@
     }
     
     /* Homepagina css mobile */
+    body{
+        background-color: #F3F3F3;
+    }
     h1{
         font-family: "Baloo Bhaijaan 2", sans-serif;
         font-size: 16px;
@@ -50,17 +54,25 @@
         text-align: center;
     
     }
+    #welkom h2{
+        margin-top: 20px;
+    }
     #welkom p{
         width: 100vw;
     }
 
     /* updates css mobile */
+    #update{
+        margin-top: 20px;
+    }
     #rugbyletsel{
         display: grid;
-        /* grid-template-columns: repeat(3, 1fr); */
         grid-template-areas: "image tekst pijlen";
         column-gap: repeat(3, 1fr);
+        gap: 1rem;
         margin-top: 5px;
+        align-items: center;
+        border-bottom: solid black 1px;
     }
     #rugbyletsel .rugbyletselimg {
         width: 90px;
@@ -73,12 +85,107 @@
         grid-area: "pijlen";
     }
 
+    #clubactie{
+        display: grid;
+        grid-template-areas: "image tekst pijlen";
+        column-gap: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 5px;
+        align-items: center;
+    }
+    #clubactie .clubactieimg {
+        width: 90px;
+        grid-area: "image";
+    }
+    #clubactie p{
+        grid-area: "tekst";
+    }
+    #cluvactie a img{
+        grid-area: "pijlen";
+    }
+
+    #update button{
+        color: white;
+        background-color: #75AB30;
+        padding: 1vh;
+        border-radius: 6px;
+        border: #75AB30;
+        text-align: center;
+        display: inline-block;
+        font-family: "Roboto Mono", monospace;
+        margin-left: 25vw;
+        margin-top: 10px;
+    }
+
     /* reviews css mobile */
+    #reviews{
+        margin-top: 50px;
+    }
     #reviews #ploeger{
         background-color: #D9D9D9;
+        width: 90vw;
+        border-radius: 5px;
+        display: grid;
+        grid-template-areas: "profilepicture text";
+        gap: 10px;
+        align-items: center;
+        margin-left: 16px;
+        margin-top: 10px;
     }
-    #reviews #ploeger img{
+    #reviews #ploeger .profilepct{
         width: 60px;
+        grid-area: "profilepicture";
+    }
+    #review #ploeger p{
+        grid-area: "text";
+        align-items: center;
+    }
+    #reviews #ploeger .review{
+        grid-column-start: 2;
+        width: 10rem;
+    }
+
+    #komSporten{
+        background-color: #D9D9D9;
+        padding: 6vw;
+        margin-top: 10px;
+    }
+
+    /* Footer css mobile */
+    footer{
+        background-color: #004A8A;
+        color: white;
+    }
+    footer #links #contact{
+        margin-left: 16px;
+    }
+    footer #links #contact p:nth-child(1){
+        font-size: 18px;
+    }
+    footer #links #contactKnop{
+        margin-top: 20px;
+        margin-left: 16px;
+    }
+    footer #links #contactKnop p:nth-child(1){
+        font-size: 18px;
+    }
+    footer #links #contactKnop a button{
+        color: white;
+        background-color: #75AB30;
+        padding: 1vh;
+        border-radius: 6px;
+        border: #75AB30;
+        text-align: center;
+        display: inline-block;
+        font-family: "Roboto Mono", monospace;
+        margin-top: 5px;
+    }
+    footer #links #privacy{
+        margin-top: 20px;
+        text-align: center;
+    }
+    footer #links #privacy a{
+        color: white;
     }
 }
 @media only screen and (min-width: 320.9px) and (max-width: 719.9px) {
@@ -137,19 +244,24 @@
 @media only screen and (min-width: 720px) {
 /* Header css desktop*/
 header{
+    height: 10vw;
     background-color: #004A8A;
     display: grid;
-    grid: 
+    grid-template-areas: 
     'logo navigatie-item';
+    column-gap: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
 }
 header img{
     width: 10vw;
-    grid-area: logo;
+    grid-area: "logo";
+    margin-left: 30px;
 }
 header nav ul li{
     width: 10vw;
     list-style: none;
-    grid-area: navigatie-item;
+    grid-area: "navigatie-item";
 }
 header nav ul li a{
     color: white;
@@ -157,10 +269,12 @@ header nav ul li a{
     font-family: "Baloo Bhaijaan 2", sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    /* float: right; */
 }
 
 /* Homepagina css desktop */
+body{
+    background-color: #F3F3F3;
+}
 h1{
     font-family: "Baloo Bhaijaan 2", sans-serif;
     font-size: 2.1rem;
@@ -182,9 +296,14 @@ p{
 }
 #welkom h1{
     text-align: center;
-
 }
 #welkom p{
     width: 50vw;
+}
+#welkom picture{
+    float: right;
+}
+#welkom .lees-meer{
+    display: none;
 }
 }
